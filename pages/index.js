@@ -5,7 +5,7 @@ import BackToTop from "../components/layout/BackToTop";
 import { useState } from "react";
 import { useEffect } from "react";
 
-export default function Home({posts}) {
+export default function Home({ posts }) {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const position = window.pageYOffset;
@@ -24,10 +24,10 @@ export default function Home({posts}) {
       {
         posts.map(post => <Post key={post.metadata.slug} post={post}></Post>)
       }
-       {
+      {
         scrollPosition > 100 ?
-        <BackToTop /> : 
-        <div></div>
+          <BackToTop /> :
+          <div></div>
       }
     </div>
   )
