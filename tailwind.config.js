@@ -7,13 +7,15 @@ module.exports = {
     },
     colors: {
       dark: "#171b1e",
-      light: "#fdfdfd",
-      accent: "#3CA9D1",
+      light: "#f3bdbc",
+      white: "#fdfdfd",
+      accent: "#0165fe",
       red: "#fb7070",
-      blue: "#3992f3",
+      blue: "#0165fe",
       gray: "gray",
       darkGray: "",
-      green: "#5fdebd"
+      green: "#5fdebd",
+      pink: "#f3bdbc"
     }
   },
   variants: {
