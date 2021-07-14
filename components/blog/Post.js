@@ -33,9 +33,8 @@ export const Post = ({ post }) => {
 
                 <section className="pt-10 flex" >
                     <span style={{ color: '#aaa' }} className=" text-xs ">Publicado em {
-                        format((Date(post.last_publication_date)),'dd/MMMM/yyyy', { locale: ptBR })
-                       
-                        }
+                        format((Date(post.last_publication_date)), 'dd/MMMM/yyyy', { locale: ptBR })
+                    }
                     </span>
                 </section>
 

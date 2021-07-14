@@ -4,31 +4,31 @@ import { Post } from "../../components/blog/Post";
 const Prismic = require('@prismicio/client');
 const apiEndpoint = 'https://kamilla-blog.cdn.prismic.io/api/v2'
 
-export default function BlogPost({post}) {
+export default function BlogPost({ post }) {
     const [scrollPosition, setScrollPosition] = useState(0);
     const handleScroll = () => {
-      const position = window.pageYOffset;
-      setScrollPosition(position);
+        const position = window.pageYOffset;
+        setScrollPosition(position);
     };
-  
+
     useEffect(() => {
-      window.addEventListener('scroll', handleScroll, { passive: true });
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
     return (
         <div>
-        {
-          <Post key={post.id} post={post}></Post>
-        }
-        {
-          scrollPosition > 100 ?
-            <BackToTop /> :
-            <div></div>
-        }
-      </div>
+            {
+                <Post key={post.id} post={post}></Post>
+            }
+            {
+                scrollPosition > 100 ?
+                    <BackToTop /> :
+                    <div></div>
+            }
+        </div>
     )
 }
 
@@ -52,7 +52,7 @@ export async function getStaticPaths() {
         paths: posts.map(x => {
             return ({
                 params: {
-                    slug:  x.slugs[0]
+                    slug: x.slugs[0]
                 }
             })
         }),
