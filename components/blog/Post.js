@@ -24,8 +24,8 @@ export const Post = ({ post }) => {
                             <Link href="/about"><a><span>Kamilla de Souza Rosa</span></a></Link>
                             <div className="flex  space-x-2">
                                 <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillLinkedin className="text-xl  hover:text-accent cursor-pointer" /></a>
-                                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillInstagram className="text-xl  hover:text-accent cursor-pointer" /></a>
-                                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillTwitterCircle className="text-xl  hover:text-accent cursor-pointer" /></a>
+                                <a target="_blank" rel="noreferrer" href="https://www.instagram.com/ka_millasouza"><AiFillInstagram className="text-xl  hover:text-accent cursor-pointer" /></a>
+                                {/* <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillTwitterCircle className="text-xl  hover:text-accent cursor-pointer" /></a> */}
                             </div>
                         </div>
                     </div>

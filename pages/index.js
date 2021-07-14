@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Post } from "../components/blog/Post";
 import BackToTop from "../components/layout/BackToTop";
 const Prismic = require('@prismicio/client');
-const apiEndpoint = 'https://kamilla-blog.cdn.prismic.io/api/v2'
+const apiEndpoint = 'https://kamilla--blog.cdn.prismic.io/api/v2'
 
 
 export default function Home({ posts }) {

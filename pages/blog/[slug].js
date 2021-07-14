@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import BackToTop from "../../components/layout/BackToTop";
 import { Post } from "../../components/blog/Post";
 const Prismic = require('@prismicio/client');
-const apiEndpoint = 'https://kamilla-blog.cdn.prismic.io/api/v2'
+const apiEndpoint = 'https://kamilla--blog.cdn.prismic.io/api/v2'
 
 export default function BlogPost({ post }) {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -34,7 +34,6 @@ export default function BlogPost({ post }) {
 
 
 export async function getStaticProps(context) {
-    console.log(context.params);
     const allPosts = (await Prismic.client(apiEndpoint).query(Prismic.Predicates.at('document.type', 'post')));
     const post = allPosts.results.find(x => x.slugs.includes(context.params.slug));
 
