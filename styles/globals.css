@@ -9,11 +9,10 @@ html{
   font-family: 'Poppins';
 }
 
-
-
 @layer base {
   .title {
-      @apply text-5xl md:text-8xl font-bold;
+      @apply text-3xl md:text-8xl font-bold text-center;
+      line-height: 1.2;
   }
   h1 {
       @apply  text-5xl font-bold;
@@ -28,7 +27,7 @@ html{
       @apply text-2xl;
   }
   a {
-      @apply hover:text-accent;
+      @apply cursor-pointer md:hover:text-accent;
   }
   a.navbar-link:hover{
       border-bottom: 1px solid #bbb;

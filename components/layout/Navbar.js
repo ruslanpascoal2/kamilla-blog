@@ -12,7 +12,7 @@ export default function Navbar() {
                         <Link href="/">
                             <a>
                                 <div className="flex items-center">
-                                    <h3 className=" text-white hover:text-dark
+                                    <h3 className=" text-white md:hover:text-dark
                           font-bold">Kamilla</h3>
                                     <BsCircleFill className="text-light ml-1" />
                                 </div>
@@ -23,7 +23,7 @@ export default function Navbar() {
                         <li>
                             <Link href="/about">
                                 <a className="navbar-link">
-                                    <TiThMenuOutline className="text-white text-2xl hover:text-dark"/>
+                                    <TiThMenuOutline className="text-white text-2xl md:hover:text-dark"/>
                                 </a>
                             </Link>
                         </li>

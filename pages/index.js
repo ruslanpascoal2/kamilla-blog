@@ -1,9 +1,10 @@
 
-import { getAllPosts } from "../scripts/blog/getAllPosts";
+import { useState, useEffect } from "react";
 import { Post } from "../components/blog/Post";
 import BackToTop from "../components/layout/BackToTop";
-import { useState } from "react";
-import { useEffect } from "react";
+const Prismic = require('@prismicio/client');
+const apiEndpoint = 'https://kamilla-blog.cdn.prismic.io/api/v2'
+
 
 export default function Home({ posts }) {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -22,7 +23,7 @@ export default function Home({ posts }) {
   return (
     <div>
       {
-        posts.map(post => <Post key={post.metadata.slug} post={post}></Post>)
+        posts.map(post => <Post key={post.id} post={post}></Post>)
       }
       {
         scrollPosition > 100 ?
@@ -34,7 +35,9 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts();
+  const allPosts = (await Prismic.client(apiEndpoint).query(Prismic.Predicates.at('document.type', 'post')));
+  const posts = allPosts.results
+
   return {
     props: {
       posts
