@@ -20,7 +20,7 @@ export default function Home({ posts }) {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  return (
+  return ( 
     <div>
       {
         posts.map(post => <Post key={post.id} post={post}></Post>)
@@ -36,7 +36,8 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const allPosts = (await Prismic.client(apiEndpoint).query(Prismic.Predicates.at('document.type', 'post')));
-  const posts = allPosts.results
+  const posts = allPosts.results;
+  console.log(posts);
 
   return {
     props: {
