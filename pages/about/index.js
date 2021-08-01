@@ -17,7 +17,7 @@ export default function About({ bio }) {
 
 export async function getStaticProps(context) {
     const bios = (await Prismic.client(apiEndpoint).query(Prismic.Predicates.at('document.type', 'bio')));
-    const bio = bios.results[bios.total_results_size - 1];
+    const bio = bios.results[0];
     return {
         props: {
             bio
