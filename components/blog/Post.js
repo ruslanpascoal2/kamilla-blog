@@ -38,9 +38,11 @@ export const Post = ({ post }) => {
                     </span>
                 </section>
 
-                <section className="pb-8 pt-6" style={{width: '100px', height: '100px', position: 'relative'}}>
-                    <Image layout="fill" alt={post.data.imagem.alt} src={post.data.imagem.url} />
-                </section>
+                <div style={{ display: 'flex', justifyContent: 'center' }} className="w-full">
+                    <section className="pb-8 pt-6" style={{ width: '800px', height: '400px', position: 'relative' }}>
+                        <Image layout="fill" alt={post.data.imagem.alt} src={post.data.imagem.url} />
+                    </section>
+                </div>
 
                 <section className="my-6 text-justify">
                     <RichText render={post.data.texto} />
