@@ -40,7 +40,7 @@ export const Post = ({ post }) => {
 
                 <div style={{ display: 'flex', justifyContent: 'center' }} className="w-full">
                     <section className="pb-8 pt-6" style={{ width: '800px', height: '400px', position: 'relative' }}>
-                        <Image layout="fill" alt={post.data.imagem.alt} src={post.data.imagem.url} />
+                        <Image layout="responsive" width="4" height="2" alt={post.data.imagem.alt} src={post.data.imagem.url} />
                     </section>
                 </div>
 
