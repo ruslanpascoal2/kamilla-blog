@@ -9,7 +9,7 @@ import { format } from 'date-fns-tz'
 import { ptBR } from "date-fns/locale";
 
 export const Post = ({ post }) => {
-
+    
     const href = `/blog/${post.slugs[0]}`
     return (
         <article className="pb-10 pt-0 md:pt-20">
@@ -38,8 +38,8 @@ export const Post = ({ post }) => {
                     </span>
                 </section>
 
-                <div style={{ display: 'flex', justifyContent: 'center' }} className="w-full">
-                    <section className="pb-8 pt-6" style={{ width: '800px', height: '400px', position: 'relative' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="w-full">
+                    <section className="pb-8 pt-6" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '800px', height: '', position: 'relative' }}>
                         <Image layout="responsive" width="800" height="400" alt={post.data.imagem.alt} src={post.data.imagem.url} />
                     </section>
                 </div>
