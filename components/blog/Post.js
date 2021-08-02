@@ -38,8 +38,8 @@ export const Post = ({ post }) => {
                     </span>
                 </section>
 
-                <section className="pb-8 pt-6 ">
-                    <Image  height={475} alt={post.data.imagem.alt} src={post.data.imagem.url} />
+                <section className="pb-8 pt-6" style={{width: '100px', height: '100px', position: 'relative'}}>
+                    <Image layout="fill" alt={post.data.imagem.alt} src={post.data.imagem.url} />
                 </section>
 
                 <section className="my-6 text-justify">
