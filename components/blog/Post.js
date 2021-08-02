@@ -39,7 +39,7 @@ export const Post = ({ post }) => {
                 </section>
 
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} className="w-full">
-                    <section className="pb-8 pt-6" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '800px', height: '', position: 'relative' }}>
+                    <section className="pb-8 pt-6" style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '800px', height: '400px', position: 'relative' }}>
                         <Image layout="responsive" width="800" height="400" alt={post.data.imagem.alt} src={post.data.imagem.url} />
                     </section>
                 </div>
