@@ -8,7 +8,7 @@ export default function About({ bio }) {
     return (
         <div>
             <div style={{ ...avatarStyle, backgroundImage: `url('${bio.data.foto.url}')` }} className="m-1 mr-2 border-dark border-1 relative flex justify-center items-center rounded-full bg-light j2-500 text-xl text-white uppercase" ></div>
-            <section className="my-6">
+            <section className="my-6 text-justify">
                     <RichText render={bio.data.descricao} />
                 </section>
         </div>

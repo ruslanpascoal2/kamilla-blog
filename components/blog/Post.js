@@ -42,7 +42,7 @@ export const Post = ({ post }) => {
                     <Image layout="responsive" width="100" height="80" alt={post.data.imagem.alt} src={post.data.imagem.url} />
                 </section>
 
-                <section className="my-6">
+                <section className="my-6 text-justify">
                     <RichText render={post.data.texto} />
                 </section>
             </div>
