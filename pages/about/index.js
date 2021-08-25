@@ -11,7 +11,7 @@ export default function About({ bio }) {
                 <div className="flex space-x-2">
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillLinkedin className="text-3xl text-gray  hover:text-accent cursor-pointer" /></a>
                     <a target="_blank" rel="noreferrer" href="https://www.instagram.com/ka_millasouza"><AiFillInstagram className="text-3xl text-gray  hover:text-accent cursor-pointer" /></a>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillTwitterCircle className="text-3xl text-gray  hover:text-accent cursor-pointer" /></a>
+                    {/* <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/kamilla-souza-6b4425184/"><AiFillTwitterCircle className="text-3xl text-gray  hover:text-accent cursor-pointer" /></a> */}
                 </div>
             </div>
             <section className="my-8 text-justify">

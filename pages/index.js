@@ -36,9 +36,8 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   const allPosts = (await Prismic.client(apiEndpoint).query(Prismic.Predicates.at('document.type', 'post')));
-  const posts = allPosts.results;
-  console.log(posts); 
-
+  const posts = allPosts.results.reverse();
+  
   return {
     props: {
       posts
